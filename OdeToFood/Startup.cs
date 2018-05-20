@@ -16,12 +16,14 @@ namespace OdeToFood
         // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
         public void ConfigureServices(IServiceCollection services)
         {
+            // we must register the custom services in here... like IGreeter
+            services.AddSingleton<IGreeter, Greeter>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, 
                                 IHostingEnvironment env,
-                                IConfiguration configuration)
+                                IGreeter greeter)
         {
             if (env.IsDevelopment())
             {
@@ -30,7 +32,7 @@ namespace OdeToFood
             // this runs for every request that we receive
             app.Run(async (context) =>
             {
-                var customGreeting = configuration["Greeting"];
+                var customGreeting = greeter.GetMessageOfTheDay();
                 await context.Response.WriteAsync(customGreeting);
             });
         }
