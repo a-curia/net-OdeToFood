@@ -27,21 +27,24 @@ namespace OdeToFood
                                 IGreeter greeter,
                                 ILogger<Startup> logger)
         {
-            //if (env.IsDevelopment())
-            //{
+            if (env.IsDevelopment())
+            {
                 app.UseDeveloperExceptionPage(); // allow all requests to flow through but raises on exception and shows exception details for developer
+            }
+            //else
+            //{
+            //    app.UseExceptionHandler();
             //}
+
+            // you can also use appsetting.envname.json file which will overwrite the appsettings.json
 
 
 
             // this runs for every request that we receive
             app.Run(async (context) =>
             {
-
-                throw new Exception("error received!");
-
                 var customGreeting = greeter.GetMessageOfTheDay();
-                await context.Response.WriteAsync(customGreeting);
+                await context.Response.WriteAsync($"{customGreeting} : {env.EnvironmentName}");
             });
 
 
