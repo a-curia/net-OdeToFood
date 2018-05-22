@@ -19,6 +19,12 @@ namespace OdeToFood
         {
             // we must register the custom services in here... like IGreeter
             services.AddSingleton<IGreeter, Greeter>();
+
+            // setting up the ASP.NET MVC framework
+            // step 1 - add the package dependency - do it if not done by default
+            // step 2 - this one - add the MVC service
+            // step 3 - add the MVC middleware
+            services.AddMvc();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -33,11 +39,10 @@ namespace OdeToFood
             }
 
             // Serving static files
-            app.UseDefaultFiles(); // so that empty url go to index.html
             app.UseStaticFiles();
 
-            //OR
-            //app.UseFileServer();
+            app.UseMvcWithDefaultRoute(); // this is MVC step 3 - you should create controller after
+
 
             // this runs for every request that we receive
             app.Run(async (context) =>
