@@ -29,38 +29,17 @@ namespace OdeToFood
         {
             //if (env.IsDevelopment())
             //{
-            //    app.UseDeveloperExceptionPage();
+                app.UseDeveloperExceptionPage(); // allow all requests to flow through but raises on exception and shows exception details for developer
             //}
 
-            // delegates and the func type
-            // app.Use - write lower level middleware
 
-            app.Use(next => //allow next piece of middlevare to process this request
-            {
-                return async context => //this is inwoked onece per http request
-                {
-                    logger.LogInformation("Request incoming!");
-                    if (context.Request.Path.StartsWithSegments("/mym"))
-                    {
-                        await context.Response.WriteAsync("Hit!");
-                        logger.LogInformation("Request handled!");
-                    }
-                    else // let the next middleware chance to respond
-                    {
-                        await next(context);
-                        logger.LogInformation("Response outgoind!"); // this is the control flow back of the pipeline
-                    }
-                };
-            });
-
-            app.UseWelcomePage(new WelcomePageOptions
-            {
-                Path = "/wp"
-            });
 
             // this runs for every request that we receive
             app.Run(async (context) =>
             {
+
+                throw new Exception("error received!");
+
                 var customGreeting = greeter.GetMessageOfTheDay();
                 await context.Response.WriteAsync(customGreeting);
             });
