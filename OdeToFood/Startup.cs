@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Routing;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
@@ -41,17 +42,36 @@ namespace OdeToFood
             // Serving static files
             app.UseStaticFiles();
 
-            app.UseMvcWithDefaultRoute(); // this is MVC step 3 - you should create controller after
+
+            //Routing
+            // Convention Based Routing - in Startup
+            // routeBuilder.MapRoute("Default", "{controller=Home}/{action=Index}/{id?}");
+            // *
+            // Attribute Based Routing
+            // [Route("[controller]/[action]")]
+
+
+            app.UseMvc(ConfigureRoutes);
+
+  
 
 
             // this runs for every request that we receive
             app.Run(async (context) =>
             {
                 var customGreeting = greeter.GetMessageOfTheDay();
-                await context.Response.WriteAsync($"{customGreeting} : {env.EnvironmentName}");
+                context.Response.ContentType = "text/plain";
+                await context.Response.WriteAsync($"Not found");
             });
 
 
+        }
+
+        private void ConfigureRoutes(IRouteBuilder routeBuilder)
+        {
+            // /admin/Home/Index/4
+            routeBuilder.MapRoute("Default", "admin/{controller=Home}/{action=Index}/{id?}"); //? means the id is optional; if you do not see the controller name use HomeController; same for action method
+            //throw new NotImplementedException();
         }
     }
 }
