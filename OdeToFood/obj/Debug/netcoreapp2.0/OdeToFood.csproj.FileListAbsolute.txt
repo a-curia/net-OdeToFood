@@ -18,3 +18,4 @@ C:\APPS\workspaceDotNet\net-OdeToFood\OdeToFood\obj\Debug\netcoreapp2.0\OdeToFoo
 C:\APPS\workspaceDotNet\net-OdeToFood\OdeToFood\obj\Debug\netcoreapp2.0\OdeToFood.AssemblyInfo.cs
 C:\APPS\workspaceDotNet\net-OdeToFood\OdeToFood\obj\Debug\netcoreapp2.0\OdeToFood.dll
 C:\APPS\workspaceDotNet\net-OdeToFood\OdeToFood\obj\Debug\netcoreapp2.0\OdeToFood.pdb
+C:\APPS\workspaceDotNet\net-OdeToFood\OdeToFood\obj\Debug\netcoreapp2.0\OdeToFood.csprojAssemblyReference.cache

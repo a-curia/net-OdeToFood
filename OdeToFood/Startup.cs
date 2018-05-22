@@ -31,14 +31,13 @@ namespace OdeToFood
             {
                 app.UseDeveloperExceptionPage(); // allow all requests to flow through but raises on exception and shows exception details for developer
             }
-            //else
-            //{
-            //    app.UseExceptionHandler();
-            //}
 
-            // you can also use appsetting.envname.json file which will overwrite the appsettings.json
+            // Serving static files
+            app.UseDefaultFiles(); // so that empty url go to index.html
+            app.UseStaticFiles();
 
-
+            //OR
+            //app.UseFileServer();
 
             // this runs for every request that we receive
             app.Run(async (context) =>
