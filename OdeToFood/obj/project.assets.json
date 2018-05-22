@@ -12536,23 +12536,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\adrian\\.nuget\\packages\\": {},
+    "C:\\Users\\gheorgheadrian.curia\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\adrian\\source\\repos\\OdeToFood\\OdeToFood\\OdeToFood.csproj",
+      "projectUniqueName": "C:\\APPS\\workspaceDotNet\\net-OdeToFood\\OdeToFood\\OdeToFood.csproj",
       "projectName": "OdeToFood",
-      "projectPath": "C:\\Users\\adrian\\source\\repos\\OdeToFood\\OdeToFood\\OdeToFood.csproj",
-      "packagesPath": "C:\\Users\\adrian\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\adrian\\source\\repos\\OdeToFood\\OdeToFood\\obj\\",
+      "projectPath": "C:\\APPS\\workspaceDotNet\\net-OdeToFood\\OdeToFood\\OdeToFood.csproj",
+      "packagesPath": "C:\\Users\\gheorgheadrian.curia\\.nuget\\packages\\",
+      "outputPath": "C:\\APPS\\workspaceDotNet\\net-OdeToFood\\OdeToFood\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\adrian\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\gheorgheadrian.curia\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -12560,7 +12560,8 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "https://api.nuget.org/v3/index.json": {}
+        "http://nuget-na.ihs.com/nuget/SAM/": {},
+        "https://www.nuget.org/api/v2/": {}
       },
       "frameworks": {
         "netcoreapp2.0": {

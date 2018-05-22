@@ -8,3 +8,14 @@ C:\Users\adrian\source\repos\OdeToFood\OdeToFood\obj\Debug\netcoreapp2.0\OdeToFo
 C:\Users\adrian\source\repos\OdeToFood\OdeToFood\obj\Debug\netcoreapp2.0\OdeToFood.AssemblyInfo.cs
 C:\Users\adrian\source\repos\OdeToFood\OdeToFood\obj\Debug\netcoreapp2.0\OdeToFood.dll
 C:\Users\adrian\source\repos\OdeToFood\OdeToFood\obj\Debug\netcoreapp2.0\OdeToFood.pdb
+C:\APPS\workspaceDotNet\net-OdeToFood\OdeToFood\bin\Debug\netcoreapp2.0\OdeToFood.deps.json
+C:\APPS\workspaceDotNet\net-OdeToFood\OdeToFood\bin\Debug\netcoreapp2.0\OdeToFood.runtimeconfig.json
+C:\APPS\workspaceDotNet\net-OdeToFood\OdeToFood\bin\Debug\netcoreapp2.0\OdeToFood.runtimeconfig.dev.json
+C:\APPS\workspaceDotNet\net-OdeToFood\OdeToFood\bin\Debug\netcoreapp2.0\OdeToFood.dll
+C:\APPS\workspaceDotNet\net-OdeToFood\OdeToFood\bin\Debug\netcoreapp2.0\OdeToFood.pdb
+C:\APPS\workspaceDotNet\net-OdeToFood\OdeToFood\obj\Debug\netcoreapp2.0\OdeToFood.csprojAssemblyReference.cache
+C:\APPS\workspaceDotNet\net-OdeToFood\OdeToFood\obj\Debug\netcoreapp2.0\OdeToFood.csproj.CoreCompileInputs.cache
+C:\APPS\workspaceDotNet\net-OdeToFood\OdeToFood\obj\Debug\netcoreapp2.0\OdeToFood.AssemblyInfoInputs.cache
+C:\APPS\workspaceDotNet\net-OdeToFood\OdeToFood\obj\Debug\netcoreapp2.0\OdeToFood.AssemblyInfo.cs
+C:\APPS\workspaceDotNet\net-OdeToFood\OdeToFood\obj\Debug\netcoreapp2.0\OdeToFood.dll
+C:\APPS\workspaceDotNet\net-OdeToFood\OdeToFood\obj\Debug\netcoreapp2.0\OdeToFood.pdb
