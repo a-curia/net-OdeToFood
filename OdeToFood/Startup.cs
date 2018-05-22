@@ -9,6 +9,7 @@ using Microsoft.AspNetCore.Routing;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
+using OdeToFood.Services;
 
 namespace OdeToFood
 {
@@ -21,11 +22,16 @@ namespace OdeToFood
             // we must register the custom services in here... like IGreeter
             services.AddSingleton<IGreeter, Greeter>();
 
+            services.AddScoped<IRestaurantData, InMemoryRestaurantData>(); // http scoped lifetime
+
+
             // setting up the ASP.NET MVC framework
             // step 1 - add the package dependency - do it if not done by default
             // step 2 - this one - add the MVC service
             // step 3 - add the MVC middleware
             services.AddMvc();
+
+            
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
