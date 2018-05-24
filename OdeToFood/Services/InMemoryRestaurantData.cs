@@ -32,6 +32,14 @@ namespace OdeToFood.Services
             return _restaurnats.FirstOrDefault(r => r.Id == id);
         }
 
+        public Restaurant AddNewRestaurant(Restaurant restaurant)
+        {
+            restaurant.Id = _restaurnats.Max(r => r.Id) + 1;
+            _restaurnats.Add(restaurant);
+
+            return restaurant; 
+        }
+
         // declaration of private fields at the bottom
         List<Restaurant> _restaurnats;
 

@@ -22,8 +22,8 @@ namespace OdeToFood
             // we must register the custom services in here... like IGreeter
             services.AddSingleton<IGreeter, Greeter>();
 
-            services.AddScoped<IRestaurantData, InMemoryRestaurantData>(); // http scoped lifetime
-
+            //services.AddScoped<IRestaurantData, InMemoryRestaurantData>(); // http scoped lifetime - instanciate an instance for each http request, reuse that instance through out of the request and then throw it away
+            services.AddSingleton<IRestaurantData, InMemoryRestaurantData>(); //because i want to see the changes on different requests
 
             // setting up the ASP.NET MVC framework
             // step 1 - add the package dependency - do it if not done by default

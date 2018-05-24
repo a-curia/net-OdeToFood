@@ -55,11 +55,25 @@ namespace OdeToFood.Controllers
         }
 
 
+        // this will be on GET - add route contraints
+        [HttpGet]
         public IActionResult Create()
         {
             return View();
         }
 
+        // this will be on POST
+        [HttpPost]
+        public IActionResult Create(RestaurantEditModel model)
+        {
+            var newRestaurant = new Restaurant();
+            newRestaurant.Name = model.Name;
+            newRestaurant.Cuisine = model.Cuisine;
+
+            newRestaurant = _restaurantData.AddNewRestaurant(newRestaurant);
+
+            return View("Details", newRestaurant);
+        }
 
     }
 }
