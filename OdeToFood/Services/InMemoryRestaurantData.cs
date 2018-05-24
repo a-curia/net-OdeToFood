@@ -27,6 +27,11 @@ namespace OdeToFood.Services
             return _restaurnats.OrderBy(r => r.Name);
         }
 
+        public Restaurant GetById(int id)
+        {
+            return _restaurnats.FirstOrDefault(r => r.Id == id);
+        }
+
         // declaration of private fields at the bottom
         List<Restaurant> _restaurnats;
 

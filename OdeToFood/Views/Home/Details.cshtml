@@ -1,0 +1,16 @@
+﻿@model OdeToFood.Models.Restaurant
+
+@*@if (Model == null)
+    {
+        <div>Not found...</div>
+    }
+    else
+    {
+        <h1>@Model.Name</h1>
+        <div>the gui to display the others</div>
+
+    }*@
+
+<h1>@Model.Name</h1>
+<div>the gui to display the others</div>
+<a asp-action="Index" asp-controller="Home">Home</a>

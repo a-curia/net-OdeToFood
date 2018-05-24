@@ -76,8 +76,11 @@ namespace OdeToFood
         private void ConfigureRoutes(IRouteBuilder routeBuilder)
         {
             // /admin/Home/Index/4
-            routeBuilder.MapRoute("Default", "admin/{controller=Home}/{action=Index}/{id?}"); //? means the id is optional; if you do not see the controller name use HomeController; same for action method
+            //routeBuilder.MapRoute("Default", "admin/{controller=Home}/{action=Index}/{id?}"); //? means the id is optional; if you do not see the controller name use HomeController; same for action method
             //throw new NotImplementedException();
+
+            routeBuilder.MapRoute("Default", "{controller=Home}/{action=Index}/{id?}");
+
         }
     }
 }

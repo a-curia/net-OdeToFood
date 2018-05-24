@@ -16,6 +16,14 @@
         <tr>
             <td>@restaurant.Id</td>
             <td>@restaurant.Name</td>
+            <td>
+                <a href="/home/details/@restaurant.Id">Details</a>
+
+                @Html.ActionLink("GoTo", "Details", new { id=restaurant.Id })  @* using the Html Helpers*@
+
+                @*using tag healpers from _ViewImports*@
+                <a asp-action="Details" asp-route-id="@restaurant.Id">GotoUsingTagHelpers</a>
+            </td>
         </tr>
         }
 
