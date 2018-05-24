@@ -64,16 +64,26 @@ namespace OdeToFood.Controllers
 
         // this will be on POST
         [HttpPost]
+        [ValidateAntiForgeryToken]
         public IActionResult Create(RestaurantEditModel model)
         {
-            var newRestaurant = new Restaurant();
-            newRestaurant.Name = model.Name;
-            newRestaurant.Cuisine = model.Cuisine;
 
-            newRestaurant = _restaurantData.AddNewRestaurant(newRestaurant);
+            // model state
+            if (ModelState.IsValid)
+            {
+                var newRestaurant = new Restaurant();
+                newRestaurant.Name = model.Name;
+                newRestaurant.Cuisine = model.Cuisine;
 
-            //return View("Details", newRestaurant);
-            return RedirectToAction(nameof(Details), new { id=newRestaurant.Id });
+                newRestaurant = _restaurantData.AddNewRestaurant(newRestaurant);
+
+                //return View("Details", newRestaurant);
+                return RedirectToAction(nameof(Details), new { id = newRestaurant.Id });
+            } else
+            {
+                return View();
+            }
+
         }
 
     }
