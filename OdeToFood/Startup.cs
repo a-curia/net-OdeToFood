@@ -36,9 +36,23 @@ namespace OdeToFood
             //services.AddSingleton<IRestaurantData, InMemoryRestaurantData>(); //because i want to see the changes on different requests
 
             services.AddDbContext<OdeToFoodDbContext>(options =>
-                options.UseSqlServer(_configuration.GetConnectionString("OdeToFood"));
+                options.UseSqlServer(_configuration.GetConnectionString("OdeToFood"))
             );
             services.AddScoped<IRestaurantData, SqlRestaurantData>();
+
+            /*
+             Entity Framework Migrations
+	            dotnet ef migrations add
+	            dotnet ef database update
+	            dotnet ef context list
+	            dotnet ef context info
+
+	            dotnet ef migrations add --help
+	            dotnet ef migrations add InitialCreate -v
+	
+	            dotnet ef database --help
+	            dotnet ef database update -v
+             */
 
             // setting up the ASP.NET MVC framework
             // step 1 - add the package dependency - do it if not done by default
