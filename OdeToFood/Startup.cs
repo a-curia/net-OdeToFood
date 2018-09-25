@@ -69,6 +69,7 @@ namespace OdeToFood
                                 IGreeter greeter,
                                 ILogger<Startup> logger)
         {
+
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage(); // allow all requests to flow through but raises on exception and shows exception details for developer

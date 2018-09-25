@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using NLog;
 using OdeToFood.Models;
 using OdeToFood.Services;
 using OdeToFood.ViewModels;
@@ -23,6 +24,20 @@ namespace OdeToFood.Controllers
 
         public IActionResult Index()
         {
+
+
+            // using Nlog
+            try
+            {
+                int zero = 0;
+                int result = 5 / zero;
+            }
+            catch (DivideByZeroException ex)
+            {
+                Logger logger = LogManager.GetCurrentClassLogger();
+                logger.ErrorException("DUMMY EXCEPTION", ex);
+            }
+
             //this.ControllerContext.ActionDescriptor.ActionName;
             //this.HttpContext.Response.OnStarting.ToString; // do not use this offen
 
